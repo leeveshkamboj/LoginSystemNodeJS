@@ -33,6 +33,7 @@ const loginResolver = async (req, res) => {
   const token = generateToken(user);
   return res.status(200).json({
     success: true,
+    email: user.email,
     token,
   });
 };
