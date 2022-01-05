@@ -9,6 +9,13 @@ Simple Login System Boilerplate Made in Node JS
 DB_URL=Your Mongodb Connection Url
 TOKEN_KEY=Secret Key for creating JWT
 ```
+
+## Use on local
+
+```
+npm install
+npm start
+```
 ## Routes
 
 ### @ Get User <br>
