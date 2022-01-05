@@ -11,14 +11,14 @@ TOKEN_KEY=Secret Key for creating JWT
 ```
 ## Routes
 
-@ Get User
+### @ Get User <br>
 URL: / METHOD: GET<br>
 Header:-
 ```
 Authorization: Bearer [token]
 ```
 
-@ Register User
+### @ Register User <br>
 URL: /user/register METHOD: POST<br>
 Parameters:-
 ```
