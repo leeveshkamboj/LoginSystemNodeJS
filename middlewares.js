@@ -9,7 +9,7 @@ const authentication_middleware = (req, res, next) => {
   } else {
     const token = req.headers.authorization.split("Bearer ")[1];
     if (!token) {
-      errors.authorization = "Authentication token must be 'Bearer [token]";
+      errors.authorization = "Authorization token must be 'Bearer [token]";
     } else {
       const verifiedJwt = jwt.verify(
         token,
@@ -18,7 +18,7 @@ const authentication_middleware = (req, res, next) => {
           if (verifiedJwt) {
             return verifiedJwt;
           }
-          errors.authorization = "Invalid/Expired Authentication token";
+          errors.authorization = "Invalid/Expired Authorization token";
         }
       );
       if (verifiedJwt) {
