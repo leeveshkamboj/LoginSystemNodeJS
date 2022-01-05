@@ -17,6 +17,28 @@ Header:-
 ```
 Authorization: Bearer [token]
 ```
+Success Response Example:-
+```
+{
+    "success": true,
+    "msg": "Yo!",
+    "user": {
+        "username": "[username]",
+        "email": "[email]",
+        "iat": [jwt_created_at],
+        "exp": [jwt_expire_at]
+    }
+}
+```
+Fail Response Example:-
+```
+{
+    "success": false,
+    "errors": {
+        "authorization": "Authorization header must be provided"
+    }
+}
+```
 
 ### @ Register User <br>
 URL: /user/register METHOD: POST<br>
@@ -51,3 +73,28 @@ Fail Response Example:-
 }
 ```
 
+### @ Login User <br>
+URL: /user/login METHOD: POST<br>
+Parameters:-
+```
+username : required, Username
+password : required, Password
+```
+Success Response Example:-
+```
+{
+    "success": true,
+    "email": "[email]",
+    "token": "[token]"
+}
+```
+Fail Response Example:-
+```
+{
+    "success": false,
+    "errors": {
+        "username": "Username not provided.",
+        "password": "Password not provided."
+    }
+}
+```
