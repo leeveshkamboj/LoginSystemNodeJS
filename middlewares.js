@@ -23,7 +23,7 @@ const authentication_middleware = (req, res, next) => {
       );
       if (verifiedJwt) {
         req.user = verifiedJwt;
-        next();
+        return next();
       }
     }
   }
